@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat.ASM - Hotel Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Eat.ASM</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#track">Track</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#admin">Admin</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button onclick="openLogin()">Login</button>
+            <button onclick="openSignup()">Sign Up</button>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to Eat.ASM</h1>
+        <p>Order delicious meals from our hotel with real-time tracking and personalized recommendations.</p>
+        <div class="featured-dishes">
+            <h2>Featured Dishes</h2>
+            <div class="dish-grid">
+                <div class="dish"><img src="media/image1.jpg" alt="Dish 1"><p>Special Pasta</p></div>
+                <div class="dish"><img src="media/image2.jpg" alt="Dish 2"><p>Grilled Chicken</p></div>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for meals...">
+            <select>
+                <option value="">All Categories</option>
+                <option value="veg">Vegetarian</option>
+                <option value="non-veg">Non-Vegetarian</option>
+            </select>
+            <button>Search</button>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="media/image1.jpg" alt="Dish">
+                <h3>Special Pasta</h3>
+                <p>Delicious pasta with creamy sauce. $10</p>
+                <button onclick="addToCart('Special Pasta', 10)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="media/image2.jpg" alt="Dish">
+                <h3>Grilled Chicken</h3>
+                <p>Juicy grilled chicken with spices. $12</p>
+                <button onclick="addToCart('Grilled Chicken', 12)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order">
+        <h2>Place Your Order</h2>
+        <div class="cart">
+            <h3>Your Cart</h3>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="cart-total">0</span></p>
+            <button onclick="proceedToCheckout()">Proceed to Checkout</button>
+        </div>
+        <div class="customization">
+            <h3>Customize Your Order</h3>
+            <textarea placeholder="Add special requests (e.g., less spicy, extra sauce)"></textarea>
+        </div>
+        <div class="payment-options">
+            <h3>Payment Options</h3>
+            <label><input type="radio" name="payment" value="card"> Credit/Debit Card</label>
+            <label><input type="radio" name="payment" value="upi"> UPI</label>
+            <label><input type="radio" name="payment" value="cod"> Cash on Delivery</label>
+        </div>
+    </section>
+
+    <!-- Track Section -->
+    <section id="track">
+        <h2>Track Your Order</h2>
+        <div class="tracking-info">
+            <p>Order Status: <span id="order-status">Pending</span></p>
+            <p>Estimated Delivery: <span id="delivery-time">N/A</span></p>
+            <p>Delivery Staff: <span id="delivery-staff">N/A</span></p>
+            <button onclick="contactSupport()">Contact Support</button>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile">
+        <h2>Your Profile</h2>
+        <div class="profile-details">
+            <p>Name: <span id="user-name">Guest</span></p>
+            <p>Email: <span id="user-email">N/A</span></p>
+            <p>Saved Addresses: <span id="user-address">N/A</span></p>
+            <button onclick="editProfile()">Edit Profile</button>
+        </div>
+        <div class="order-history">
+            <h3>Order History</h3>
+            <ul id="order-history"></ul>
+        </div>
+        <div class="reviews">
+            <h3>Your Reviews</h3>
+            <textarea placeholder="Write a review..."></textarea>
+            <button onclick="submitReview()">Submit Review</button>
+        </div>
+    </section>
+
+    <!-- Admin Section -->
+    <section id="admin">
+        <h2>Admin Console</h2>
+        <div class="admin-menu">
+            <h3>Manage Menu</h3>
+            <input type="text" placeholder="Dish Name">
+            <input type="number" placeholder="Price">
+            <button onclick="addMenuItem()">Add Item</button>
+        </div>
+        <div class="admin-orders">
+            <h3>Manage Orders</h3>
+            <ul id="admin-order-list"></ul>
+        </div>
+        <div class="admin-feedback">
+            <h3>Customer Feedback</h3>
+            <ul id="feedback-list"></ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Eat.ASM. All rights reserved.</p>
+        <p><a href="#support">Customer Support</a> | <a href="#terms">Terms & Conditions</a></p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
