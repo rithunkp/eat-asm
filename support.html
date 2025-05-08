@@ -19,7 +19,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="tel"] {
+input[type="issue"] {
   margin-left: 15vw;
   width: 60%;
   padding: 10px;
@@ -28,6 +28,10 @@ input[type="tel"] {
   border-radius: 5px;
   background-color: #3a3f5c;
   color: #fff;
+}
+
+input[type="issue"]{
+    padding: 50px;
 }
 
 button {
@@ -105,16 +109,21 @@ a:hover {
 		<!--blue area 1-->
 		<section class='blue1' style="height: 130vh;">
 
-            <form >
-                <label for="email">Email:</label><br>
+            <form>
+                <label for="text">Full Name:</label><br>
+                <input type="text" id="text" name="text" required><br><br>
+
+                <label for="email">Contact:</label><br>
                 <input type="email" id="email" name="email" required><br><br>
 
-                <label for="password">Password:</label><br>
-                <input type="password" id="password" name="password" required><br><br>
+                <label for="text">What type of issue:</label><br>
+                <input type="text" id="text" name="text" required><br><br>
+
+                <label for="issue">Describe your issue:</label><br>
+                <input type="issue" id="issue" name="issue" required><br><br>
 
             </form>
-            <a href="index.html"><button> Log in </button></a>
-            <p>Don't have an account? <a href="signup.html">Sign up here</a>.</p>
+            <a href="index.html"><button> Submit </button></a>
         </section>
     </body>
 </html>
