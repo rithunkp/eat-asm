@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAT.ASM - Orders</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #64748b;
+            --success: #22c55e;
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        .navbar {
+            background-color: var(--surface);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .order-details {
+            background-color: var(--surface);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .detail-value {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .track-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .track-button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .order-card {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px -1px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .order-card:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">EAT.ASM</div>
+        <div class="detail-value">#ORDER-123456</div>
+    </nav>
+
+    <div class="container">
+        <div class="order-details">
+            <h3 class="section-title">Current Order</h3>
+            <div class="detail-row">
+                <span class="detail-label">Delivery Address</span>
+                <span class="detail-value">123 Main Street, City</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Order Items</span>
+                <span class="detail-value">1x Margherita Pizza, 2x Garlic Bread</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Total Amount</span>
+                <span class="detail-value">$35.99</span>
+            </div>
+            <button class="track-button">Track Order</button>
+        </div>
+
+        <div class="orders-history">
+            <h3 class="section-title">Previous Orders</h3>
+            <div class="order-card">
+                <div class="detail-row">
+                    <span class="detail-label">#ORDER-123455</span>
+                    <span class="detail-value">June 8, 2025</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Items</span>
+                    <span class="detail-value">2x Chicken Wings, 1x Pizza</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Total</span>
+                    <span class="detail-value">$28.99</span>
+                </div>
+                <button class="track-button">Track Order</button>
+            </div>
+
+            <div class="order-card">
+                <div class="detail-row">
+                    <span class="detail-label">#ORDER-123454</span>
+                    <span class="detail-value">June 7, 2025</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Items</span>
+                    <span class="detail-value">1x Pasta, 1x Salad</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Total</span>
+                    <span class="detail-value">$22.99</span>
+                </div>
+                <button class="track-button">Track Order</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
