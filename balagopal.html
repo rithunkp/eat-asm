@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Balagopal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fff5f0 0%, #ffeee6 100%);
+            line-height: 1.6;
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            background: white;
+            margin: 40px auto;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(255, 140, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ff8c00 0%, #ff7200 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .pfp {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+        }
+        
+        .profile-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            font-weight: 300;
+        }
+        
+        .profile-info .student-id {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section h2 {
+            color: #ff8c00;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #ffe4cc;
+            font-weight: 600;
+        }
+        
+        .summary {
+            background: #fff8f3;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ff8c00;
+            font-size: 1.05rem;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f5f5f5;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        li:before {
+            content: "▶";
+            color: #ff8c00;
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+        }
+        
+        li:last-child {
+            border-bottom: none;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .skill-item {
+            background: #fff8f3;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #ff8c00;
+        }
+        
+        .contact a {
+            color: #ff8c00;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .contact a:hover {
+            color: #ff7200;
+            text-decoration: underline;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                border-radius: 12px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .profile {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .profile-info h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Smooth animations */
+        .section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile">
+                <img src="balls.jpg" class="pfp" alt="Profile Picture">
+                <div class="profile-info">
+                    <h1>Balagopal</h1>
+                    <div class="student-id">AM.SC.U4AIE24012</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>Summary</h2>
+                <div class="summary">
+                    Motivated undergraduate pursuing Bachelor of Technology in Computer Science from Amrita University. Skilled in software development with strong programming knowledge. Eager to contribute to innovative teams and grow professionally.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Education</h2>
+                <ul>
+                    <li>X CBSE | Amrita Vidyalayam Haripad</li>
+                    <li>XII CBSE | Amrita Vidyalayam Haripad</li>
+                    <li>BTech Computer Science | Amrita Vishwa Vidyapeetham</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">Programming: Java, Python, C</div>
+                    <div class="skill-item">Web Dev: HTML, CSS, Bootstrap</div>
+                    <div class="skill-item">Databases: SQL</div>
+                    <div class="skill-item">Tools: Git, Linux</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Applied Generative AI</li>
+                    <li>Machine Learning</li>
+                    <li>Deep Learning</li>
+                    <li>AI Software Engineering</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Gaming</li>
+                    <li>Sports</li>
+                    <li>Music</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Contact Details</h2>
+                <ul class="contact">
+                    <li>Phone: +91 8921870814</li>
+                    <li><a href="https://mail.google.com/mail/u/0/?to=balagopal5000@gmail.com&subject=Contact+-+Resume#compose" target="_blank">✉ Email Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Made for college project</p>
+    </footer>
+</body>
+</html>
