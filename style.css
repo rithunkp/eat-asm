@@ -253,6 +253,9 @@
     .format_textbox h1{
       font-size: 24px;
     }
+    .space{
+      margin-top: 200px;
+    }
   }
   /*white 1 image marquee*/
   .format_textbox marquee{

@@ -6,43 +6,387 @@
 		<title>Eat.asm</title>
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	 
+		<style>
+    body { 
+
+      margin: 0; 
+
+      font-family: 'Segoe UI', sans-serif; 
+
+      background: #fff9f4; 
+
+      color: #333; 
+
+    } 
+
+    header { 
+
+      background-color: #ff3e3e; 
+
+      color: white; 
+
+      padding: 1rem 2rem; 
+
+      text-align: center; 
+
+    } 
+
+    .banner { 
+
+      background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') no-repeat center; 
+
+      background-size: cover; 
+
+      color: white; 
+
+      text-align: center; 
+
+      padding: 4rem 2rem; 
+
+    } 
+
+    .banner h1 { 
+
+      font-size: 3rem; 
+
+      margin: 0; 
+
+      background: rgba(0, 0, 0, 0.4); 
+
+      display: inline-block; 
+
+      padding: 0.5rem 1rem; 
+
+      border-radius: 12px; 
+
+    } 
+
+    .offers { 
+
+      display: grid; 
+
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+
+      gap: 1.5rem; 
+
+      padding: 2rem; 
+
+    } 
+
+    .card { 
+
+      background: white; 
+
+      border-radius: 16px; 
+
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+
+      overflow: hidden; 
+
+      display: flex; 
+
+      flex-direction: column; 
+
+      transition: transform 0.3s; 
+
+    } 
+
+    .card:hover { 
+
+      transform: scale(1.03); 
+
+    } 
+
+    .card img { 
+
+      width: 100%; 
+
+      height: 200px; 
+
+      object-fit: cover; 
+
+    } 
+
+    .card-content { 
+
+      padding: 1rem; 
+
+      flex-grow: 1; 
+
+    } 
+
+    .card-content h3 { 
+
+      margin: 0 0 0.5rem; 
+
+      color: #e63946; 
+
+    } 
+
+    .card-content p { 
+
+      font-size: 0.95rem; 
+
+      color: #555; 
+
+    } 
+
+    .coupon { 
+
+      background: #ffeaa7; 
+
+      color: #d35400; 
+
+      border: 1px dashed #e17055; 
+
+      padding: 0.4rem; 
+
+      font-weight: bold; 
+
+      border-radius: 6px; 
+
+      text-align: center; 
+
+      margin-top: 0.5rem; 
+
+    } 
+
+    .btn { 
+
+      background-color: #ff3e3e; 
+
+      color: white; 
+
+      border: none; 
+
+      padding: 0.5rem 1rem; 
+
+      margin: 1rem auto; 
+
+      border-radius: 10px; 
+
+      cursor: pointer; 
+
+      font-size: 1rem; 
+
+      transition: background 0.3s; 
+
+      display: block; 
+
+      width: 80%; 
+
+      text-align: center; 
+
+    } 
+
+    .btn:hover { 
+
+      background-color: #d63031; 
+
+    } 
+
+    footer { 
+
+      background-color: #222; 
+
+      color: #aaa; 
+
+      text-align: center; 
+
+      padding: 1rem; 
+
+      font-size: 0.85rem; 
+
+    } 
+
+  </style> 
+	
 	</head>
 	<body>
-        <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
-        <a class="navbar-brand" href="/index.html"><img src="img\logowhite2.png"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarNav">
-          <ul class="navbar-nav  mr-auto ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/menu.html">Menu</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/delivery.html">Delivery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/support.html">Support</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/offers.html">Offers</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                User
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/login.html">Log in</a>
-                <a class="dropdown-item" href="/signup.html">Sign up</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+		  <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+		  <a class="navbar-brand" href="/index.html"><img src="img\logowhite2.png"></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse " id="navbarNav">
+		    <ul class="navbar-nav  mr-auto ml-auto">
+		      <li class="nav-item">
+		        <a class="nav-link" href="menu.html">Menu</a>
+		      </li>
+			  <li class="nav-item">
+		        <a class="nav-link" href="delivery.html">Delivery</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="support.html">Support</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="offers.html">Offers</a>
+		      </li>
+		    <li class="nav-item">
+		        <a class="nav-link" href="login.html">Log in</a>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
         
-		<section class='blue1' style="height: 130vh;">
-            <h1 style="position: fixed; bottom: 0; padding-bottom: 30px;">No offers at the moment.</h1>
-            
-        </section>
+		 
+
+
+ 
+
+  <div class="banner"> 
+
+    <h1> EAT.ASM OFFERS AND COUPONS!</h1> 
+
+  </div> 
+
+ 
+
+  <section class="offers"> 
+
+ 
+
+    <div class="card"> 
+
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Pizza Combo"> 
+
+      <div class="card-content"> 
+
+        <h3>🍕 Weekend Combo</h3> 
+
+        <p>Large Pizza + Coke + Garlic Bread @ ₹399 only.</p> 
+
+        <div class="coupon">Coupon: <strong>WEEKEND399</strong></div> 
+
+        <button class="btn" onclick="applyOffer('WEEKEND399')">Access Offer</button> 
+
+      </div> 
+
+    </div> 
+
+ 
+
+    <div class="card"> 
+
+      <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0" alt="Diwali Offer"> 
+
+      <div class="card-content"> 
+
+        <h3>🎇 Diwali Dhamaka</h3> 
+
+        <p>Flat 20% OFF + Free Dessert on orders above ₹499.</p> 
+
+        <div class="coupon">Coupon: <strong>DIWALI20</strong></div> 
+
+        <button class="btn" onclick="applyOffer('DIWALI20')">Access Offer</button> 
+
+      </div> 
+
+    </div> 
+
+ 
+
+    <div class="card"> 
+
+      <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90" alt="Burger Offer"> 
+
+      <div class="card-content"> 
+
+        <h3>🍔 BOGO Fridays</h3> 
+
+        <p>Buy 1 Get 1 Free on burgers every Friday!</p> 
+
+        <div class="coupon">Coupon: <strong>BOGOFRI</strong></div> 
+
+        <button class="btn" onclick="applyOffer('BOGOFRI')">Access Offer</button> 
+
+      </div> 
+
+    </div> 
+
+ 
+
+    <div class="card"> 
+
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Biryani Holi"> 
+
+      <div class="card-content"> 
+
+        <h3>🌈 Holi Biryani Blast</h3> 
+
+        <p>Enjoy 25% OFF on Biryani this Holi festival.</p> 
+
+        <div class="coupon">Coupon: <strong>HOLI25</strong></div> 
+
+        <button class="btn" onclick="applyOffer('HOLI25')">Access Offer</button> 
+
+      </div> 
+
+    </div> 
+
+ 
+
+    <div class="card"> 
+
+      <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90" alt="Birthday Cake"> 
+
+      <div class="card-content"> 
+
+        <h3>🎂 Birthday Gift</h3> 
+
+        <p>Celebrate with a FREE cake on orders above ₹300.</p> 
+
+        <div class="coupon">Coupon: <strong>BDAYGIFT</strong></div> 
+
+        <button class="btn" onclick="applyOffer('BDAYGIFT')">Access Offer</button> 
+
+      </div> 
+
+    </div> 
+
+ 
+
+    <div class="card"> 
+
+      <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4" alt="Refer & Earn"> 
+
+      <div class="card-content"> 
+
+        <h3>💸 Refer & Earn</h3> 
+
+        <p>Get ₹100 credit for every friend you refer to Eat.ASM!</p> 
+
+        <div class="coupon">Coupon: <strong>REFER100</strong></div> 
+
+        <button class="btn" onclick="applyOffer('REFER100')">Access Offer</button> 
+
+      </div> 
+
+    </div> 
+
+ 
+
+  </section> 
+
+ 
+
+  <footer> 
+
+    &copy; 2025 Eat.ASM | All rights reserved | Terms apply to all offers. 
+
+  </footer> 
+
+ 
+
+  <script> 
+
+    function applyOffer(code) { 
+
+      alert("🎉 Coupon '" + code + "' applied! Go to checkout to claim your deal."); 
+
+    } 
+
+  </script> 
     </body>
 </html>

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Eat.asm</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>:root {
+      --primary-color: #fc8019;
+      --bg: #fffefc;
+      --text-color: #222;
+      --card-bg: #fff;
+      --radius: 14px;
+      --shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-color);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+    }
+    header p {
+      color: #555;
+    }
+    .menu-grid {
+        padding: 50px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 15px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card-image {
+      width: 100%;
+      height: 150px;
+      background: #f0f0f0;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 6px;
+    }
+    .card-desc {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    .card-price {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #111;
+    }
+  </style>
+    
+    </head>
+    <body>
+          <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+          <a class="navbar-brand" href="/index.html"><img src="img\logowhite2.png"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav  mr-auto ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="delivery.html">Delivery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="support.html">Support</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="offers.html">Offers</a>
+              </li>
+		    <li class="nav-item">
+		        <a class="nav-link" href="login.html">Log in</a>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
+        
+
+
+
+  <div class="menu-grid">
+
+    <div class="card" onclick="addToCart('Idli Sambar')">
+      <div class="card-image">
+        <img src="img/idli-sambar.jpg" alt="Idli Sambar">
+      </div>
+      <div class="card-title">Idli Sambar</div>
+      <div class="card-desc">Steamed rice cakes served with spicy sambar and chutneys.</div>
+      <div class="card-price">₹40</div>
+    </div>
+
+    <div class="card" onclick="addToCart('Aloo Paratha')">
+      <div class="card-image">
+        <img src="img/aloo-paratha.jpg" alt="Aloo Paratha">
+      </div>
+      <div class="card-title">Aloo Paratha</div>
+      <div class="card-desc">Stuffed flatbread with spicy potato, served with curd and pickle.</div>
+      <div class="card-price">₹55</div>
+    </div>
+
+    <div class="card" onclick="addToCart('Rajma Chawal')">
+      <div class="card-image">
+        <img src="img/rajma-chawal.jpg" alt="Rajma Chawal">
+      </div>
+      <div class="card-title">Rajma Chawal</div>
+      <div class="card-desc">Red kidney bean curry served hot with steamed rice.</div>
+      <div class="card-price">₹75</div>
+    </div>
+
+    <div class="card" onclick="addToCart('Chicken Biryani')">
+      <div class="card-image">
+        <img src="img/chicken-biryani.jpg" alt="Chicken Biryani">
+      </div>
+      <div class="card-title">Chicken Biryani</div>
+      <div class="card-desc">Fragrant rice layered with marinated chicken and spices.</div>
+      <div class="card-price">₹149</div>
+    </div>
+
+    <div class="card" onclick="addToCart('Medu Vada')">
+      <div class="card-image">
+        <img src="img/medu-vada.jpg" alt="Medu Vada">
+      </div>
+      <div class="card-title">Medu Vada</div>
+      <div class="card-desc">Crispy lentil fritters served with sambar and chutney.</div>
+      <div class="card-price">₹45</div>
+    </div>
+
+    <div class="card" onclick="addToCart('Dhokla')">
+      <div class="card-image">
+        <img src="img/dhokla.jpg" alt="Dhokla">
+      </div>
+      <div class="card-title">Dhokla</div>
+      <div class="card-desc">Soft, steamed savory cakes made with fermented batter.</div>
+      <div class="card-price">₹35</div>
+    </div>
+
+    <div class="card" onclick="addToCart('Paneer Butter Masala')">
+      <div class="card-image">
+        <img src="img/paneer-butter-masala.jpg" alt="Paneer Butter Masala">
+      </div>
+      <div class="card-title">Paneer Butter Masala</div>
+      <div class="card-desc">Cottage cheese cubes in rich, creamy tomato gravy.</div>
+      <div class="card-price">₹129</div>
+    </div>
+
+    <div class="card" onclick="addToCart('Poha')">
+      <div class="card-image">
+        <img src="img/poha.jpg" alt="Poha">
+      </div>
+      <div class="card-title">Poha</div>
+      <div class="card-desc">Flattened rice stir-fried with onions, peanuts, and spices.</div>
+      <div class="card-price">₹30</div>
+    </div>
+
+    <div class="card" onclick="addToCart('Masala Chai')">
+      <div class="card-image">
+        <img src="img/masala-chai.jpg" alt="Masala Chai">
+      </div>
+      <div class="card-title">Masala Chai</div>
+      <div class="card-desc">Spiced Indian tea brewed with milk and herbs.</div>
+      <div class="card-price">₹15</div>
+    </div>
+
+    <div class="card" onclick="addToCart('Rasmalai')">
+      <div class="card-image">
+        <img src="img/rasmalai.jpg" alt="Rasmalai">
+      </div>
+      <div class="card-title">Rasmalai</div>
+      <div class="card-desc">Soft cottage cheese balls soaked in sweetened saffron milk.</div>
+      <div class="card-price">₹45</div>
+    </div>
+
+    <div class="card" onclick="addToCart('Vegetable Pulao')">
+      <div class="card-image">
+        <img src="img/vegetable-pulao.jpg" alt="Vegetable Pulao">
+      </div>
+      <div class="card-title">Vegetable Pulao</div>
+      <div class="card-desc">Fragrant rice cooked with mixed vegetables and whole spices.</div>
+      <div class="card-price">₹70</div>
+    </div>
+
+    <div class="card" onclick="addToCart('Samosa (2 pcs)')">
+      <div class="card-image">
+        <img src="img/samosa.jpg" alt="Samosa">
+      </div>
+      <div class="card-title">Samosa (2 pcs)</div>
+      <div class="card-desc">Deep-fried pastry filled with spiced potato and peas.</div>
+      <div class="card-price">₹30</div>
+    </div>
+
+    <div class="card" onclick="addToCart('Kulfi')">
+      <div class="card-image">
+        <img src="img/kulfi.jpg" alt="Kulfi">
+      </div>
+      <div class="card-title">Kulfi</div>
+      <div class="card-desc">Traditional Indian ice cream made with thickened milk.</div>
+      <div class="card-price">₹40</div>
+    </div>
+
+  </div>
+
+  <script>
+    function addToCart(itemName) {
+      alert(itemName + " added to cart!");
+    }
+  </script>
+
+    </body>
+</html>
